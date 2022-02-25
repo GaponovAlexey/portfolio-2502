@@ -1,0 +1,153 @@
+/* MOBILE */
+
+.main_home {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    &--info {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index:55;
+        position: fixed;
+        top: 0;
+        left: 0;
+        animation-name: top-to-bottom;        
+        animation-duration: 1.2s;        
+        animation-timing-function: ease-in-out;        
+        animation-fill-mode: forwards;
+        animation-delay: 1.2s;
+        background: $white;
+        opacity: 0;
+
+        &--header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            &--logo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;  
+                margin: 30px 0 0 30px;  
+                animation: inner-left 1s 1s ease both, text-clip .5s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+                animation-delay: 2.3s;
+            }
+
+            &--nav-mobile {
+                margin-right: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $gray;
+                z-index: 9999;
+                padding: 15px;
+                border-radius: 100%;
+                margin-top: 20px;
+                animation: inner-left 1s 1s ease both, text-clip .5s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+                animation-delay: 2.3s;
+                background: $white;
+            }
+        }
+
+        &--title {
+            margin: 0 30px;
+
+            h1 {
+                font-size: 1.5rem;
+                animation: inner-left 1s 1s ease both, text-clip .5s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+                animation-delay: 2.5s;
+            }
+
+            p {
+                display: none;
+            }
+        }
+
+        &--cta {
+            background: $main;
+            padding: 0px 0;
+            display: flex;
+            justify-content: center;
+
+            button {
+                border: none;
+                outline: none;
+                background: none;
+                color: $white;
+                border: 1px solid $white;
+                padding: 10px 15%;
+                border-radius: 10px;
+                text-align: center;
+                cursor: pointer;
+                margin: 20px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                width: 50vw;
+                gap: 20px;
+            }
+        }
+    }
+
+    &--video {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: auto;
+        animation-name: height;        
+        animation-duration: .8s;        
+        animation-timing-function: ease-in-out;        
+        animation-fill-mode: forwards;
+        animation-delay: 1.6s;
+
+        &--cta {
+            margin: 0 auto;
+            button {
+                border: none;
+                outline: none;
+                background: none;
+                color: $white;
+                border: 1px solid $white;
+                padding: 10px 15%;
+                border-radius: 10px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                width: 50vw;
+                gap: 20px;
+            }
+
+            .video-full {
+                filter: brightness(100%);
+            }
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position:absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            filter: brightness(15%);
+        }
+
+        &--nav {
+            display: none;
+        }
+    }
+}

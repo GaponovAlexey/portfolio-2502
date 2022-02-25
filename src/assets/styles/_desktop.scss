@@ -1,0 +1,162 @@
+/* DESKTOP & TABLET */
+
+@media (min-width: 768px){
+    .main_home {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+
+        &--info {
+            width: 35%;
+            height: 100%;            
+            animation-name: left-to-right;        
+            animation-duration: 1.2s;        
+            animation-timing-function: ease-in-out;        
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            opacity: 0;
+
+            &--header {
+                &--logo {
+                    animation: inner-left 1s 1s ease both, text-clip .5s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+                    animation-delay: 2.3s;
+                }
+            }
+
+            &--title {
+                h1 { 
+                    font-size: 2.5rem;
+                    animation: inner-left 1s 1s ease both, text-clip .5s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+                    animation-delay: 2.5s;
+                    font-weight: 700;
+                }
+
+                p {
+                    display: block;
+                    animation: inner-left 1s 1s ease both, text-clip .5s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+                    animation-delay: 2.7s;
+                    font-size: 1.1rem;
+                }
+            }
+
+            &--cta {
+                padding: 50px 0;
+                a {
+                    button {
+                        width: 450px; 
+                        height: 100px;
+                        font-size: 1.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 20px;
+
+                        &:hover {
+                            background: #ffffff1f;
+                            svg {
+                                transition: transform .5s ease-in-out;
+                                transform: rotate(330deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--header {
+                &--nav-mobile {
+                    display: none;
+                }
+                .nav-menu {
+                    display:none;
+                }
+            }
+        }
+
+        &--video {
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: absolute;
+            top: 0;
+            right: 0;
+            
+            animation-name: width;        
+            animation-duration: 0.8s;        
+            animation-timing-function: ease-in-out;        
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+
+            video {
+                animation-name: bottom-to-top;        
+                animation-duration: 0.8s;        
+                animation-timing-function: ease-in-out;        
+                animation-fill-mode: forwards;
+                animation-delay: 0s;
+            }
+
+
+            &--nav {
+                display: block;
+                background: none;
+                margin: 57px 0 0 30px;
+                display: flex;
+                gap: 30px;
+                opacity: 0;
+                z-index: 9999;
+
+                animation-name: fade-in;        
+                animation-duration: 0.8s;        
+                animation-timing-function: ease-in-out;        
+                animation-fill-mode: forwards;
+                animation-delay: 2.2s;
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    position: relative;
+                    font-size: 1.2rem;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 1px;
+                        bottom: -5px;
+                        left: 0;
+                        background-color: #ffffff;
+                        transform-origin: bottom right;
+                        transition: transform 0.2s ease-out;
+                      }
+                      &:hover:after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                      }
+                }
+            }
+
+            &--cta {
+                margin-bottom: 70px;
+                button {
+                    width: 450px; 
+                    height: 100px;
+                    font-size: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    &:hover {
+                        background: #ffffff1f;
+                        svg {
+                            transition: transform .5s ease-in-out;
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

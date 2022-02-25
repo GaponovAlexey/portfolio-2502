@@ -1,0 +1,37 @@
+
+.nav-menu {
+  background-color: $main;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: -110%;
+  transition: 850ms;
+  z-index: 999;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  a {
+    color: $white;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    
+    animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation-delay: 2.3s;
+  }
+}

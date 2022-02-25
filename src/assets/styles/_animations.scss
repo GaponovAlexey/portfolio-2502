@@ -1,0 +1,84 @@
+/* ANIMATIONS */
+
+@media (min-width: 768px){
+
+    @keyframes left-to-right {
+        from {
+            transform: translateX(-100vw);
+            opacity: 0;
+        }      
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+      }
+
+      @keyframes bottom-to-top {
+        from {
+            transform: translateY(100vh);
+        }      
+        to {
+            transform: translateY(0);
+        }
+      }
+
+      @keyframes width{
+        from {
+            width: 100vw;
+        }      
+        to {
+            width: 65%;
+        }
+      }
+      
+      @keyframes fade-in{
+        from {
+            opacity: 0;
+        }      
+        to {
+            opacity: 1;
+        }
+      }
+}
+
+/* MOBILE */
+
+@keyframes top-to-bottom {
+    from {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }      
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+
+  @keyframes height {
+    from {
+        height: 100vh;
+    }      
+    to {
+        height: 30%;
+    }
+  }
+
+  /* GLOBAL */
+
+
+  @keyframes text-clip {
+    from {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+      opacity: 0;
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes fade-in-top {
+    from {margin-top: -20px; opacity: 0;}
+    to {margin-top: 0px; opacity: 1}
+  }
